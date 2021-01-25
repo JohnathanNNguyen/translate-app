@@ -8,6 +8,11 @@ import { MainPageComponent } from './main-page/main-page.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { arrowLeftRight, NgxBootstrapIconsModule } from 'ngx-bootstrap-icons';
+
+const icons = {
+  arrowLeftRight
+};
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatInputModule } from '@angular/material/input';
@@ -23,10 +28,8 @@ import { MatInputModule } from '@angular/material/input';
     AppRoutingModule,
 
     BrowserAnimationsModule,
-    BsDropdownModule.forRoot(),
-    MatToolbarModule,
-    MatInputModule
-
+    NgxBootstrapIconsModule.pick(icons),
+    BsDropdownModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
