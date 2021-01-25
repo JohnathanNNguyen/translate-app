@@ -1,0 +1,81 @@
+<div class="container-fluid">
+  <h1>Translator Guru</h1>
+  <hr>
+  <div class="row">
+    <div class="col-md-6 col-lg-6 col-sm-12 translate-container">
+      <p>Choose source language here...</p>
+      <div class="btn-group" dropdown>
+        <button
+          id="button-animated"
+          dropdownToggle
+          type="button"
+          class="btn btn-primary dropdown-toggle"
+          aria-controls="dropdown-animated"
+        >
+          Pick Source Language <span class="caret"></span>
+        </button>
+        <ul
+          id="dropdown-animated"
+          *dropdownMenu
+          class="dropdown-menu"
+          role="menu"
+          aria-labelledby="button-animated"
+        >
+          <li role="menuitem"><a class="dropdown-item" href="#">English</a></li>
+          <li role="menuitem">
+            <a class="dropdown-item" href="#">Spanish</a>
+          </li>
+          <li role="menuitem">
+            <a class="dropdown-item" href="#">Italian</a>
+          </li>
+        </ul>
+      </div>
+      <!-- <hr /> -->
+      <div class="container">
+      <textarea name="" id="textbox" placeholder="Type your text here" cols="35" rows="15"></textarea>
+    </div>
+      <!-- <hr /> -->
+      <button class="btn btn-primary" id="trans-btn">Translate!</button>
+    </div>
+    <div class="row"></div>
+    <div class="col-md-6 col-lg-6 col-sm-12 translate-container2">
+      <div class="row">
+          <p>Choose target language here...</p>
+          <div class="btn-group" dropdown>
+            <button
+              id="button-animated"
+              dropdownToggle
+              type="button"
+              class="btn btn-primary dropdown-toggle"
+              aria-controls="dropdown-animated"
+            >
+              Pick Target Language <span class="caret"></span>
+            </button>
+            <ul
+              id="dropdown-animated"
+              *dropdownMenu
+              class="dropdown-menu"
+              role="menu"
+              aria-labelledby="button-animated"
+            >
+              <li role="menuitem"><a class="dropdown-item" href="#">English</a></li>
+              <li role="menuitem">
+                <a class="dropdown-item" href="#">Spanish</a>
+              </li>
+              <li role="menuitem">
+                <a class="dropdown-item" href="#">Italian</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- <hr/> -->
+          <div class="container">
+          <textarea name="" id="textbox" placeholder="Type your text here" cols="35" rows="15"></textarea>
+        </div>
+          <!-- <hr/> -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+  
