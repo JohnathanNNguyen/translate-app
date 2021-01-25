@@ -8,6 +8,11 @@ import { MainPageComponent } from './main-page/main-page.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { arrowLeftRight, NgxBootstrapIconsModule } from 'ngx-bootstrap-icons';
+
+const icons = {
+  arrowLeftRight
+};
 
 @NgModule({
   declarations: [
@@ -20,6 +25,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
     AppRoutingModule,
 
     BrowserAnimationsModule,
+    NgxBootstrapIconsModule.pick(icons),
     BsDropdownModule.forRoot()
   ],
   providers: [],
