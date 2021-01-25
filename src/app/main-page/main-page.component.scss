@@ -1,5 +1,58 @@
+.btn {
+  background-color: rgb(40, 82, 136);
+  color:whitesmoke;
+  margin: 10px;
+
+}
+
+#trans-btn {
+  background-color: rgb(12, 85, 95);
+}
+
+textarea {
+  border-radius: 1rem;
+  padding-left: 1rem;
+}
+
+
+h1 {
+  background-color: rgb(9, 78, 78);
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 55px;
+  color: aliceblue;
+}
+
+p {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(3, 35, 65);
+  font-weight: bolder;
+  font-size: 30px;
+  text-align: left;
+}
+
+.row {
+  display: flex;  
+  flex-wrap: wrap;
+  margin-right: -10px;
+  margin-left: 10px;
+}
+
 .translate-container {
-  border-right: 1px solid black;
-  min-height: 100vh;
+  border-right: 3px solid black;
+  min-height: 30vh;
+  padding-left: 2rem;
   padding-top: 100px;
+}
+
+.translate-container2 {
+  padding-left: 2rem;
+  padding-top: 100px;
+}
+
+.container {
+  padding-left: 0rem;
+}
+.container2 {
+  padding-left: 2rem;
 }
