@@ -7,7 +7,6 @@
 # Only exists if Bazel was run
 /bazel-out
 
-/api-key.ts
 # dependencies
 /node_modules
 
@@ -45,3 +44,5 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+/api-key.ts
