@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ApiKey } from '../../api-key/api-key';
+import { ApiKey } from '../../.secret/api-key';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
