@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { MainPageComponent } from './main-page/main-page.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
@@ -26,6 +28,9 @@ import { MatInputModule } from '@angular/material/input';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+
+
 
     BrowserAnimationsModule,
     NgxBootstrapIconsModule.pick(icons),
