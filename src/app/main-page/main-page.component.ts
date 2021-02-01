@@ -1,34 +1,38 @@
 import { Component, OnInit } from '@angular/core';
-import { GoogleObj, TranslateApiService } from '../translate-api.service';
+
+import { FormControl } from '@angular/forms';
+import { Google } from '../google.model';
+import { GoogletranslateService } from '../services/googletranslate.service';
+
 
 @Component({
   selector: 'app-main-page',
   templateUrl: './main-page.component.html',
   styleUrls: ['./main-page.component.scss']
 })
-export class MainPageComponent implements OnInit {
+export class MainPageComponent {
+  lang = new FormControl('en');
+  translateObj: Google = new Google()
+  translated: string = ''
+  targetLang: string = 'vi'
 
-  public googleObj: GoogleObj = new GoogleObj();
-  public key: string;
-  public result = '';
-  private btnSubmit: any;
+  constructor(private trans: GoogletranslateService,) { }
 
-  constructor(private _google: TranslateApiService) { }
+  onTranslate(textInput: string, targetLanguage: string) {
+   console.log(targetLanguage);
+   
+    this.translateObj.q = textInput
+    this.trans.translate(this.translateObj)
+      .subscribe((res: any) => {
+        this.translated = res.data.translations[0].translatedText
 
-  ngOnInit() {
-    this.btnSubmit = document.getElementById('btnSubmit');
-  }
-
-  send() {
-    this.btnSubmit.disabled = true;
-    this._google.translate(this.googleObj, this.key).subscribe(
-      (res: any) => {
-        this.btnSubmit.disabled = false;
-        this.result = res.data.translations[0].translatedText;
+        console.log(res)
       },
-      err => {
-        console.log(err);
-      }
-    );
+        err => {
+          console.log(err)
+        }
+      )
+
   }
 }
+
