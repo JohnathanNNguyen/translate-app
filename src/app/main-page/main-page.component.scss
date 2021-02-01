@@ -1,8 +1,7 @@
 .btn {
   background-color: rgb(40, 82, 136);
-  color:whitesmoke;
+  color: whitesmoke;
   margin: 10px;
-
 }
 
 #trans-btn {
@@ -14,17 +13,16 @@ textarea {
   padding-left: 1rem;
 }
 
-
 h1 {
   background-color: rgb(9, 78, 78);
   text-align: center;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 55px;
   color: aliceblue;
 }
 
 p {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: rgb(3, 35, 65);
   font-weight: bolder;
   font-size: 30px;
@@ -32,7 +30,7 @@ p {
 }
 
 .row {
-  display: flex;  
+  display: flex;
   flex-wrap: wrap;
   margin-right: -10px;
   margin-left: 10px;

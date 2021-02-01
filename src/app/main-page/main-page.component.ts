@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+
 import { FormControl } from '@angular/forms';
 import { Google } from '../google.model';
 import { GoogletranslateService } from '../services/googletranslate.service';
+
 
 @Component({
   selector: 'app-main-page',
@@ -30,6 +32,7 @@ export class MainPageComponent {
           console.log(err)
         }
       )
+
   }
 }
 
