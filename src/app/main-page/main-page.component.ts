@@ -14,25 +14,22 @@ export class MainPageComponent {
   lang = new FormControl('en');
   translateObj: Google = new Google()
   translated: string = ''
-  targetLang: string = 'vi'
 
   constructor(private trans: GoogletranslateService,) { }
 
   onTranslate(textInput: string, targetLanguage: string) {
-   console.log(targetLanguage);
-   
+    // console.log(targetLanguage);
+    this.translateObj.target = targetLanguage
     this.translateObj.q = textInput
     this.trans.translate(this.translateObj)
       .subscribe((res: any) => {
-        this.translated = res.data.translations[0].translatedText
-
         console.log(res)
+        this.translated = res.data.translations[0].translatedText
       },
         err => {
           console.log(err)
         }
       )
-
   }
 }
 

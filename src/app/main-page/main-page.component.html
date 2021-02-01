@@ -40,23 +40,31 @@
 
       <!-- <hr /> -->
       <div class="container">
-      <textarea name="translate-text" id="textbox" #textInput cols="35" rows="15"></textarea>
-    </div>
+        <textarea
+          name="translate-text"
+          id="textbox"
+          #textInput
+          cols="35"
+          rows="15"
+        ></textarea>
+      </div>
       <!-- <hr /> -->
-      <button (click)="onTranslate(textInput.value, lang.value)">Translate!</button>
+      <button (click)="onTranslate(textInput.value, lang.value)">
+        Translate!
+      </button>
     </div>
     <div class="row"></div>
     <div class="col-md-6 col-lg-6 col-sm-12 translate-container2">
       <div class="row">
-          <p>Choose target language  here...</p>
-          <label for="lang">Choose Language: </label>
-          <select id="lang" [formControl]="lang">
+        <p>Choose target language here...</p>
+        <label for="lang">Choose Language: </label>
+        <select id="lang" [formControl]="lang">
           <option value="en" selected>English</option>
           <option value="es">Spanish</option>
-          <option value="de">German </option>
+          <option value="de">German</option>
           <option value="ar">Arabic</option>
-          </select>
-          <!-- <div class="btn-group" dropdown>
+        </select>
+        <!-- <div class="btn-group" dropdown>
             <button
               id="button-animated"
               dropdownToggle
@@ -66,7 +74,7 @@
             >
               Pick Target Language <span class="caret"></span>
             </button>
-           
+
             <ul
               id="dropdown-animated"
               *dropdownMenu
@@ -84,10 +92,11 @@
             </ul>
           </div> -->
 
-          <!-- <hr/> -->
-          <div class="container">
-          <textarea name="" id="textbox" cols="35" rows="15">{{ translated }}</textarea>
-
+        <!-- <hr/> -->
+        <div class="container">
+          <textarea name="" id="textbox" cols="35" rows="15">{{
+            translated
+          }}</textarea>
         </div>
 
         <!-- <hr/> -->

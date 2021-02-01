@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { ApiKey } from '../../../.secret/api.keys';
+import { ApiKeys } from '../../../.secret/api';
 import { Google } from '../google.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GoogletranslateService {
-  ApiKey: string = ApiKey.APIKEY
+  ApiKey: string = ApiKeys.APIKEY
   url: string = 'https://translation.googleapis.com/language/translate/v2/?key='
 
   constructor(private http: HttpClient) { }
