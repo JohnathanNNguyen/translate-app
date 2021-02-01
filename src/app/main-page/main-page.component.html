@@ -3,8 +3,15 @@
   <hr>
   <div class="row">
     <div class="col-md-6 col-lg-6 col-sm-12 translate-container">
-      <p>Choose source language here...</p>
-      <div class="btn-group" dropdown>
+      <p>Source Language...</p>
+      <!-- <label for="lang">Choose Language: </label>
+      <select id="lang" [formControl]="lang">
+      <option value="en" selected>English</option>
+      <option value="es">Spanish</option>
+      <option value="de">German </option>
+      <option value="ar">Arabic</option>
+      </select> -->
+      <!-- <div class="btn-group" dropdown>
         <button
           id="button-animated"
           dropdownToggle
@@ -29,19 +36,27 @@
             <a class="dropdown-item" href="#">Italian</a>
           </li>
         </ul>
-      </div>
+      </div> -->
+
       <!-- <hr /> -->
       <div class="container">
-      <textarea name="" id="textbox" placeholder="Type your text here" cols="35" rows="15"></textarea>
+      <textarea name="translate-text" id="textbox" #textInput cols="35" rows="15"></textarea>
     </div>
       <!-- <hr /> -->
-      <button class="btn btn-primary" id="trans-btn">Translate!</button>
+      <button (click)="onTranslate(textInput.value, lang.value)">Translate!</button>
     </div>
     <div class="row"></div>
     <div class="col-md-6 col-lg-6 col-sm-12 translate-container2">
       <div class="row">
           <p>Choose target language here...</p>
-          <div class="btn-group" dropdown>
+          <label for="lang">Choose Language: </label>
+          <select id="lang" [formControl]="lang">
+          <option value="en" selected>English</option>
+          <option value="es">Spanish</option>
+          <option value="de">German </option>
+          <option value="ar">Arabic</option>
+          </select>
+          <!-- <div class="btn-group" dropdown>
             <button
               id="button-animated"
               dropdownToggle
@@ -51,6 +66,7 @@
             >
               Pick Target Language <span class="caret"></span>
             </button>
+           
             <ul
               id="dropdown-animated"
               *dropdownMenu
@@ -66,11 +82,11 @@
                 <a class="dropdown-item" href="#">Italian</a>
               </li>
             </ul>
-          </div>
+          </div> -->
 
           <!-- <hr/> -->
           <div class="container">
-          <textarea name="" id="textbox" placeholder="Type your text here" cols="35" rows="15"></textarea>
+          <textarea name="" id="textbox" cols="35" rows="15">{{ translated }}</textarea>
         </div>
           <!-- <hr/> -->
 
