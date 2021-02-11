@@ -6,7 +6,7 @@ import { OptionTwoComponent } from './option-two/option-two.component';
 
 const routes: Routes = [
   { path: '', component: MainPageComponent },
-  { path: '', component: OptionTwoComponent }
+  { path: 'page2', component: OptionTwoComponent }
 ];
 
 @NgModule({

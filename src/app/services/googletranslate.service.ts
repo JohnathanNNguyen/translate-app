@@ -15,5 +15,4 @@ export class GoogletranslateService {
   translate(obj: Google) {
     return this.http.post(this.url + this.ApiKey, obj)
   }
-
 }

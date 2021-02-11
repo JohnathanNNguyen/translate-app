@@ -18,12 +18,10 @@ export class MainPageComponent {
   constructor(private trans: GoogletranslateService,) { }
 
   onTranslate(textInput: string, targetLanguage: string) {
-    // console.log(targetLanguage);
     this.translateObj.target = targetLanguage
     this.translateObj.q = textInput
     this.trans.translate(this.translateObj)
       .subscribe((res: any) => {
-        console.log(res)
         this.translated = res.data.translations[0].translatedText
       },
         err => {

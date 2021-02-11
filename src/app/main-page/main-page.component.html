@@ -4,112 +4,30 @@
   <div class="row">
     <div class="col-md-6 col-lg-6 col-sm-12 translate-container">
       <p>Source Language...</p>
-      <!-- <label for="lang">Choose Language: </label>
-      <select id="lang" [formControl]="lang">
-      <option value="en" selected>English</option>
-      <option value="es">Spanish</option>
-      <option value="de">German </option>
-      <option value="ar">Arabic</option>
-      </select> -->
-      <!-- <div class="btn-group" dropdown>
-        <button
-          id="button-animated"
-          dropdownToggle
-          type="button"
-          class="btn btn-primary dropdown-toggle"
-          aria-controls="dropdown-animated"
-        >
-          Pick Source Language <span class="caret"></span>
-        </button>
-        <ul
-          id="dropdown-animated"
-          *dropdownMenu
-          class="dropdown-menu"
-          role="menu"
-          aria-labelledby="button-animated"
-        >
-          <li role="menuitem"><a class="dropdown-item" href="#">English</a></li>
-          <li role="menuitem">
-            <a class="dropdown-item" href="#">Spanish</a>
-          </li>
-          <li role="menuitem">
-            <a class="dropdown-item" href="#">Italian</a>
-          </li>
-        </ul>
-      </div> -->
+      <textarea
+        class="textInput"
+        name="translate-text"
+        id="textbox"
+        #textInput
+        cols="20"
+        rows="10"
+      ></textarea>
 
-      <!-- <hr /> -->
-      <div class="container">
-        <textarea
-          name="translate-text"
-          id="textbox"
-          #textInput
-          cols="35"
-          rows="15"
-        ></textarea>
-      </div>
-      <!-- <hr /> -->
       <button (click)="onTranslate(textInput.value, lang.value)">
         Translate!
       </button>
     </div>
-    <div class="row"></div>
     <div class="col-md-6 col-lg-6 col-sm-12 translate-container2">
-      <div class="row">
-        <p>Choose target language here...</p>
-        <label for="lang">Choose Language: </label>
-        <select id="lang" [formControl]="lang">
-          <option value="en" selected>English</option>
-          <option value="es">Spanish</option>
-          <option value="de">German</option>
-          <option value="ar">Arabic</option>
-        </select>
-        <!-- <div class="btn-group" dropdown>
-            <button
-              id="button-animated"
-              dropdownToggle
-              type="button"
-              class="btn btn-primary dropdown-toggle"
-              aria-controls="dropdown-animated"
-            >
-              Pick Target Language <span class="caret"></span>
-            </button>
+      <p>Choose target language here...</p>
+      <select id="lang" [formControl]="lang">
+        <option value="en" selected>English</option>
+        <option value="es">Spanish</option>
+        <option value="de">German</option>
+        <option value="ar">Arabic</option>
+      </select>
 
-            <ul
-              id="dropdown-animated"
-              *dropdownMenu
-              class="dropdown-menu"
-              role="menu"
-              aria-labelledby="button-animated"
-            >
-              <li role="menuitem"><a class="dropdown-item" href="#">English</a></li>
-              <li role="menuitem">
-                <a class="dropdown-item" href="#">Spanish</a>
-              </li>
-              <li role="menuitem">
-                <a class="dropdown-item" href="#">Italian</a>
-              </li>
-            </ul>
-          </div> -->
-
-        <!-- <hr/> -->
-        <div class="container">
-          <textarea name="" id="textbox" cols="35" rows="15">{{
-            translated
-          }}</textarea>
-        </div>
-
-        <!-- <hr/> -->
-        <div class="container">
-          <textarea
-            name=""
-            id="textbox"
-            placeholder="Type your text here"
-            cols="35"
-            rows="15"
-          ></textarea>
-        </div>
-        <!-- <hr/> -->
+      <div class="container">
+        <p class="output">{{ translated }}</p>
       </div>
     </div>
   </div>
