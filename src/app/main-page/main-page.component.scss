@@ -1,22 +1,6 @@
-.btn {
-  background-color: rgb(40, 82, 136);
-  color: whitesmoke;
-  margin: 10px;
-}
 .container-fluid {
   padding: 0;
 }
-
-#trans-btn {
-  background-color: rgb(12, 85, 95);
-}
-
-textarea {
-  width: 100%;
-  min-height: 40vh;
-  font-size: 25px;
-}
-
 h1 {
   background-color: rgb(34, 39, 114);
   text-align: center;
@@ -24,7 +8,11 @@ h1 {
   font-size: 55px;
   color: aliceblue;
 }
-
+.btn {
+  background-color: rgb(40, 82, 136);
+  color: whitesmoke;
+  margin: 10px;
+}
 p {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: rgb(0, 0, 0);
@@ -32,7 +20,9 @@ p {
   font-size: 30px;
   text-align: left;
 }
-
+#trans-btn {
+  background-color: rgb(12, 85, 95);
+}
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -40,23 +30,39 @@ p {
   margin-left: 10px;
 }
 
-.translate-container {
-  border-right: 3px solid black;
-  min-height: 30vh;
-  padding-left: 2rem;
-  padding-top: 100px;
+.small-screen {
+  textarea {
+    width: 95%;
+    height: 20vh;
+    font-size: 25px;
+  }
 }
 
-.translate-container2 {
-  padding-left: 2rem;
-  padding-top: 75px;
-}
+.large-screen {
+  textarea {
+    width: 100%;
+    min-height: 40vh;
+    font-size: 25px;
+  }
 
-.container {
-  padding-left: 0rem;
-}
-.container2 {
-  padding-left: 2rem;
+  .translate-container {
+    border-right: 3px solid black;
+    min-height: 30vh;
+    padding-left: 2rem;
+    padding-top: 100px;
+  }
+
+  .translate-container2 {
+    padding-left: 2rem;
+    padding-top: 75px;
+  }
+
+  .container {
+    padding-left: 0rem;
+  }
+  .container2 {
+    padding-left: 2rem;
+  }
 }
 button {
   background-color: rgb(34, 39, 114);
