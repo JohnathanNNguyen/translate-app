@@ -1,34 +1,46 @@
 <div class="container-fluid">
-  <h1>Translator Guru</h1>
+  <h1>Translate</h1>
   <hr />
-  <div class="row">
-    <div class="col-md-6 col-lg-6 col-sm-12 translate-container">
-      <p>Source Language...</p>
-      <textarea
-        class="textInput"
-        name="translate-text"
-        id="textbox"
-        #textInput
-        cols="20"
-        rows="10"
-      ></textarea>
+  <!-- <div [ngClass]="{'small-screen': isMobile, 'large-screen': !isMobile}"> -->
+    <div class="row">
+      <div class="col-md-6 col-lg-6 col-sm-12 translate-container">
+        <div layout="column" layout-fill layout-align="center center"></div>
+        <p>Source Language...</p>
+        <textarea class="textInput" name="translate-text" id="textbox" #textInput cols="25" rows="10"></textarea>
 
-      <button (click)="onTranslate(textInput.value, lang.value)">
-        Translate!
-      </button>
-    </div>
-    <div class="col-md-6 col-lg-6 col-sm-12 translate-container2">
-      <p>Choose target language here...</p>
-      <select id="lang" [formControl]="lang">
-        <option value="en" selected>English</option>
-        <option value="es">Spanish</option>
-        <option value="de">German</option>
-        <option value="ar">Arabic</option>
-      </select>
-
-      <div class="container">
-        <p class="output">{{ translated }}</p>
-      </div>
+       <br>
+        <div class="col-md-6 col-lg-6 col-sm-12 translate-container2">
+          <select id="lang" [formControl]="lang">
+            <option value="en" selected>English</option>
+      <option value="ar">Arabic</option>
+      <option value="hy">Armenian</option>
+      <option value="fr">French</option>
+      <option value="de">German</option>
+      <option value="el">Greek</option>
+      <option value="haw">Hawaiian</option>
+      <option value="he">Hebrew</option>
+      <option value="ig">Igbo</option>
+      <option value="it">Italian</option>
+      <option value="ja">Japanese</option>
+      <option value="ku">Kurdish</option>
+      <option value="la">Latin</option>
+      <option value="fa">Persian</option>
+      <option value="ro">Romanian</option>
+      <option value="sm">Samoan</option>
+      <option value="es">Spanish</option>
+      <option value="sv">Swedish</option>
+      <option value="vi">Vietnamese</option>
+      <option value="yo">Yoruba</option>
+      <option value="zu">Zulu</option>
+    </select>
+    <button (click)="onTranslate(textInput.value, lang.value)">
+      Translate!
+    </button>
+    <div class="container">
+      <p class="output">{{ translated }}</p>
     </div>
   </div>
+</div>
+  </div>
+
 </div>
