@@ -1,82 +1,86 @@
 .container-fluid {
   padding: 0;
 }
-
 h1 {
-background-color: rgb(23, 26, 73);
-text-align: center;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-font-size: 6vw;
-color: aliceblue;
+  background-color: rgb(34, 39, 114);
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 55px;
+  color: aliceblue;
 }
-
+.btn {
+  background-color: rgb(40, 82, 136);
+  color: whitesmoke;
+  margin: 10px;
+}
 p {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: rgb(65, 64, 64);
-  font-weight: bold;
-  font-size: 1.5rem;
-  text-align: center;
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
+  font-size: 30px;
+  text-align: left;
 }
-
+#trans-btn {
+  background-color: rgb(12, 85, 95);
+}
 .row {
   display: flex;
   flex-wrap: wrap;
+  margin-right: -10px;
+  margin-left: 10px;
 }
 
-#lang {
-  font-size: large;
-  font-family: Arial, Helvetica, sans-serif;
-  margin-top: 10px;
-  margin-left: 0px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+.small-screen {
+  textarea {
+    width: 95%;
+    height: 20vh;
+    font-size: 25px;
+  }
+  .output-container {
+    margin-top: 50px;
+  }
 }
 
-// textarea {
-//   width: 95%;
-//   height: 20vh;
-//   font-size: 25px;
+.large-screen {
+  textarea {
+    width: 100%;
+    min-height: 40vh;
+    font-size: 25px;
+  }
 
-// }
-// .small-screen {
-//   }
+  .translate-container {
+    border-right: 3px solid black;
+    min-height: 30vh;
+    padding-left: 2rem;
+    padding-top: 100px;
+  }
 
-textarea {
-  width: 90%;
-  min-height: 15vh;
-  font-size: 25px;
-  margin-right: 10px;
+  .translate-container2 {
+    padding-left: 2rem;
+    padding-top: 75px;
+  }
+
+  .container {
+    padding-left: 0rem;
+  }
+  .container2 {
+    padding-left: 2rem;
+  }
 }
-
-.translate-container {
-  min-height: 30vh;
-  border: 2px;
-  padding-left: 2rem;
-  padding-top: 75px;
-
-}
-
-.translate-container2 {
-  margin: 0px 0px 0px 0px;
-  padding-left: 0px;
-  padding-right: 0px;
-  padding-top: 25px;
-}
-
-body {
-  text-align: center;
-}
-// .large-screen {
-// }
-
 button {
-  background-color: rgb(23, 26, 73);
+  background-color: rgb(34, 39, 114);
   color: #ffffff;
-  font-size: large;
-  padding: 3px;
+  padding: 5px;
   margin-top: 20px;
-  margin-left: 5px;
   &:hover {
     background-color: rgba(34, 39, 114, 0.842);
+  }
+}
+.output-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    text-align: center;
   }
 }
